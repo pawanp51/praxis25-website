@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Cinzel, MedievalSharp } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Users, Trophy, Target, Code, Bug } from "lucide-react"
+import { ArrowLeft, Users, Trophy, Target } from "lucide-react"
 
 import flameImg from "../../../public/cta-bg-flames.webp"
 
@@ -14,50 +14,60 @@ const medievalSharp = MedievalSharp({ weight: "400", subsets: ["latin"] })
 
 const rounds = [
   {
-    title: "Round 1: Build-on-the-Go",
-    description: "Create a frontend-only website using provided assets and themes",
+    title: "Round 1: The Mind Test",
+    description: "Test with tricky questions, riddles or mystery puzzles.",
     details: [
-      "Teams receive a basic website skeleton",
-      "Specific theme announced at start",
-      "New assets provided periodically",
-      "10 minutes freestyle time at the end",
-      "Deploy on Vercel or Netlify",
+      "15 questions, 2 marks each",
+      "No negative marking",
+      "Team size: 4 members",
+      "Topics: General Knowledge",
+      "Duration: 30 minutes",
     ],
     rules: [
-      "Incorporate all provided assets",
-      "Adhere to the announced theme",
-      "Submit deployed website link for evaluation",
-      "Creative use of assets is encouraged",
-      "Design consistency and user experience are key",
+      "Teams will collaborate to answer questions",
+      "Top-scoring teams qualify for next round",
+      "Interactive and engaging format",
     ],
   },
   {
-    title: "Round 2: Fullstack Bug Fixing",
-    description: "Identify and resolve issues in a functional website's codebase",
+    title: "Round 2: Escape Room",
+    description: "Participants are trapped in a haunted location and must escape within a time limit.",
     details: [
-      "Teams receive full codebase of a pre-built website",
-      "15-minute familiarization period",
-      "1-2 hours to fix as many issues as possible",
-      "Log and submit each fixed issue with description",
+      "Clues and puzzles will be given.",
+      "Solve them to get the key for escaping the room",
+      "Venue: Mechanical Department Seminar Hall",
     ],
     rules: [
-      "Focus on number of issues fixed and quality of solutions",
-      "Optimize code where possible",
-      "Document all changes made",
-      "Time management is crucial",
-      "Team with most effective fixes wins",
+      "No mobile phones or laptops allowed",
+      "No external assistance",
+      "Individual presentations only",
+      "Time limit per participant",
+    ],
+  },
+  {
+    title: "Round 3: Confession Room",
+    description: "Participants are blindfolded and must solve the riddle by listening properly at once.",
+    details: [
+      "Top 6 teams qualify",
+      "Venue: IT Department classroom",
+    ],
+    rules: [
+      "No external assistance allowed",
+      "Follow designated areas only",
+      "Time-based evaluation",
+      "Top 3 teams win prizes",
     ],
   },
 ]
 
-export default function CodeAndCraftEvent() {
+export default function ShipwreckEvent() {
   return (
     <div className={`min-h-screen bg-[#0A0C10] text-[#D5B577] ${cinzel.className}`}>
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center">
         <Image
           src={flameImg}
-          alt="Code & Craft event background"
+          alt="Survive the Shadows event background"
           fill
           className="object-cover"
           priority
@@ -73,26 +83,22 @@ export default function CodeAndCraftEvent() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
             <div className="flex items-center gap-6 mb-6">
               <Image
-                src="/wolf-got-removebg-preview.png"
-                alt="House Stark"
+                src="/octopus-got-removebg-preview.png"
+                alt="House Greyjoy"
                 width={80}
                 height={80}
                 className="opacity-80"
               />
               <div>
                 <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
-                  Code & Craft
+                  Survive the Shadows
                 </h1>
-                <p className="text-xl text-[#D5B577]">House Stark Presents</p>
+                <p className="text-xl text-[#D5B577]">House Greyjoy Presents</p>
               </div>
             </div>
 
-            <p className="text-lg md:text-xl mb-8">
-              Forge your web development skills in this dynamic challenge. Create, debug, and conquer!
-            </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-        
+      
               <div className="flex items-center gap-3">
                 <Trophy className="h-6 w-6" />
                 <div>
@@ -104,7 +110,7 @@ export default function CodeAndCraftEvent() {
                 <Target className="h-6 w-6" />
                 <div>
                   <p className="text-sm text-[#D5B577]/60">Rounds</p>
-                  <p className="font-bold">2 Challenges</p>
+                  <p className="font-bold">3 Stages</p>
                 </div>
               </div>
             </div>
@@ -121,7 +127,7 @@ export default function CodeAndCraftEvent() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: index * 0.2 }}
                 className="space-y-6"
               >
@@ -130,9 +136,7 @@ export default function CodeAndCraftEvent() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h3 className="font-bold text-[#FFD700] flex items-center gap-2">
-                      <Code className="h-5 w-5" /> Challenge Details
-                    </h3>
+                    <h3 className="font-bold text-[#FFD700]">Details</h3>
                     <ul className="space-y-2">
                       {round.details.map((detail, idx) => (
                         <li key={idx} className="flex items-center gap-2">
@@ -144,9 +148,7 @@ export default function CodeAndCraftEvent() {
                   </div>
 
                   <div className="space-y-4">
-                    <h3 className="font-bold text-[#FFD700] flex items-center gap-2">
-                      <Bug className="h-5 w-5" /> Rules & Criteria
-                    </h3>
+                    <h3 className="font-bold text-[#FFD700]">Rules</h3>
                     <ul className="space-y-2">
                       {round.rules.map((rule, idx) => (
                         <li key={idx} className="flex items-center gap-2">
@@ -166,21 +168,6 @@ export default function CodeAndCraftEvent() {
               viewport={{ once: true }}
               className="pt-8 border-t border-[#D5B577]/20"
             >
-              <h3 className={`text-2xl font-bold mb-4 ${medievalSharp.className}`}>Event Requirements</h3>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D5B577]" />
-                  Node.js and npm installed on systems
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D5B577]" />
-                  Assets uploaded on GitHub for participants to download
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D5B577]" />
-                  Restrictions on ChatGPT, Claude, Gemini, and other LLMs
-                </li>
-              </ul>
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">Register Now</Button>
             </motion.div>
           </div>

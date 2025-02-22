@@ -15,11 +15,11 @@ const medievalSharp = MedievalSharp({ weight: "400", subsets: ["latin"] })
 
 const events = [
   {
-    name: "Shipwreck",
+    name: "Surivive the Shadows",
     description: "The Red Keep Lockdown: Break or Betray",
     icon: "/octopus-got-removebg-preview.png",
     house: "House Greyjoy",
-    link: "/events/shipwreck",
+    link: "/events/survive-the-shadows",
     prize: "₹15,000",
     rounds: ["Quiz", "Speak Up to Stay Up", "Real Life Wumpus World"],
   },
@@ -42,11 +42,11 @@ const events = [
     rounds: ["Qualifiers", "Semi-Finals", "Grand Finals"],
   },
   {
-    name: "Code & Craft",
+    name: "Reverse Hackathon",
     description: "Web Development in the Seven Kingdoms",
     icon: "/wolf-got-removebg-preview.png",
     house: "House Stark",
-    link: "/events/code-and-craft",
+    link: "/events/reverse-hackathon",
     prize: "₹15,000",
     rounds: ["Round 1", "Round 2", "Final Round"],
   },
@@ -104,11 +104,17 @@ export default function Home() {
             <Image
               src='/pccoe-logo-removebg-preview.png'
               alt="PCCOE Logo"
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               className="opacity-80"
             />
-            Praxis
+            <Image
+              src='/praxis-logo-removebg-preview.png'
+              alt="Praxis Logo"
+              width={100}
+              height={100}
+              className="opacity-80"
+            />
           </motion.h1>
 
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -118,7 +124,7 @@ export default function Home() {
           <nav className="hidden md:block">
             <ul className="flex space-x-6">
               {["Home", "Events", "Register"].map((item) => (
-                <motion.li key={item} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                <motion.li key={item} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} >
                   <Link href={`#${item.toLowerCase()}`} className="hover:text-[#FFD700] transition-colors">
                     {item}
                   </Link>
