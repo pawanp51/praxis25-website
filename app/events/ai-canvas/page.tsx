@@ -203,9 +203,36 @@ export default function AICanvasEvent() {
                   Creativity and willingness to explore AI-assisted art
                 </li>
               </ul>
+            
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-                Register Now
+           <a href="//" target="_blank" rel="noopener noreferrer">
+                 Register Now
+           </a>
               </Button>
+              <h1>PCCOE Participants</h1>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
+              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
+           <a href="//" target="_blank" rel="noopener noreferrer">
+                 Register Now
+           </a>
+              </Button>
+
+              <h1>Non-PCCOE Participants</h1>
             </motion.div>
           </div>
         </div>

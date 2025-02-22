@@ -123,7 +123,7 @@ export default function Home() {
 
           <nav className="hidden md:block">
             <ul className="flex space-x-6">
-              {["Home", "Events", "Register"].map((item) => (
+              {["Home", "Events"].map((item) => (
                 <motion.li key={item} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} >
                   <Link href={`#${item.toLowerCase()}`} className="hover:text-[#FFD700] transition-colors">
                     {item}
@@ -140,7 +140,7 @@ export default function Home() {
               className="absolute top-full left-0 w-full bg-[#0A0C10] border-b border-[#D5B577]/20 md:hidden"
             >
               <ul className="flex flex-col p-4">
-                {["Home", "Events", "About", "Register"].map((item) => (
+                {["Home", "Events"].map((item) => (
                   <li key={item} className="py-2">
                     <Link
                       href={`#${item.toLowerCase()}`}

@@ -54,3 +54,6 @@ body {
   border-image-repeat: repeat;
 }
 
+html {
+  scroll-behavior: smooth;
+}
