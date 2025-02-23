@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react";
+import { FaInstagram } from "react-icons/fa";
 
 import flameImg from "../public/cta-bg-flames.webp"
 
@@ -22,7 +23,7 @@ const events = [
     icon: "/octopus-got-removebg-preview.png",
     house: "House Greyjoy",
     link: "/events/survive-the-shadows",
-    prize: "₹15,000",
+    prize: "₹12,000",
     rounds: ["Mind Test", "Escape Room", "Confession Room"],
   },
   {
@@ -31,7 +32,7 @@ const events = [
     icon: "/stag-got-removebg-preview.png",
     house: "House Baratheon",
     link: "/events/crick-blitz",
-    prize: "₹15,000",
+    prize: "₹12,000",
     rounds: ["Crown First Trial", "The Coronation"],
   },
   {
@@ -40,7 +41,7 @@ const events = [
     icon: "/arrow-got-removebg-preview.png",
     house: "House Martell",
     link: "/events/bgmi-showdown",
-    prize: "₹15,000",
+    prize: "₹12,000",
     rounds: ["Qualifiers", "Semi-Finals", "Grand Finals"],
   },
   {
@@ -81,11 +82,11 @@ const events = [
   },
 ]
 
-const socialLinks = {
-  IEEE: "https://www.instagram.com/pccoeieee?igsh=Zmt0NW92M3J5d2tp",
-  MLSC: "https://www.instagram.com/mlscpccoe?igsh=MXhsa2tyMmhxbzZsaw==",
-  GDGC: "https://www.instagram.com/gdgcpccoe?igsh=dzg5amt5M3VpMXBn"
-};
+const socialLinks = [
+  { name: "IEEE", link: "https://www.instagram.com/pccoeieee?igsh=Zmt0NW92M3J5d2tp" },
+  { name: "MLSC", link: "https://www.instagram.com/mlscpccoe?igsh=MXhsa2tyMmhxbzZsaw==" },
+  { name: "GDGC", link: "https://www.instagram.com/gdgcpccoe?igsh=dzg5amt5M3VpMXBn" }
+];
 
 
 
@@ -142,7 +143,7 @@ export default function Home() {
             className="text-2xl font-bold flex items-center gap-3"
           >
             <Image
-              src='/ITSA.png'
+              src='/mlsc.png'
               alt="Praxis Logo"
               width={60}
               height={60}
@@ -150,6 +151,13 @@ export default function Home() {
             />
              <Image
               src='/IEEE.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
+              className="opacity-80"
+            />
+             <Image
+              src='/pccoe-logo-removebg-preview.png'
               alt="Praxis Logo"
               width={60}
               height={60}
@@ -163,19 +171,13 @@ export default function Home() {
               className="opacity-80"
             />
             <Image
-              src='/mlsc.png'
+              src='/ITSA.png'
               alt="Praxis Logo"
               width={60}
               height={60}
               className="opacity-80"
             />
-            <Image
-              src='/pccoe-logo-removebg-preview.png'
-              alt="Praxis Logo"
-              width={60}
-              height={60}
-              className="opacity-80"
-            />
+           
           </motion.h1>
 
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -379,27 +381,29 @@ export default function Home() {
 
              
             <div className="flex justify-center space-x-6">
-              {Object.entries(socialLinks).map(([social, link]) => (
-                <motion.a
-                  key={social}
-                  href= {link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="hover:text-[#FFD700] transition-colors"
-                >
-                  {social}
-                </motion.a>
-              ))}
-            </div>
+        {socialLinks.map(({ name, link }) => (
+          <motion.a
+            key={name}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-col items-center text-center hover:text-[#FFD700] transition-colors"
+          >
+            <FaInstagram className="text-3xl mb-1" /> {/* Instagram Icon */}
+            <span className="text-sm">{name}</span> {/* Name below the icon */}
+          </motion.a>
+        ))}
+          </div>
             <p className="mt-8 text-sm text-[#D5B577]/60">
               &copy; {new Date().getFullYear()} Praxis Tech Fest. All rights reserved.
             </p>
             <div className="flex justify-center items-center space-x-8">
-          
-             <Image
-              src='/ITSA.png'
+               
+            
+            <Image
+              src='/mlsc.png'
               alt="Praxis Logo"
               width={60}
               height={60}
@@ -419,20 +423,15 @@ export default function Home() {
               height={80}
               className="opacity-80"
             />
-            <Image
-              src='/mlsc.png'
+           
+             <Image
+              src='/ITSA.png'
               alt="Praxis Logo"
               width={60}
               height={60}
               className="opacity-80"
             />
-            <Image
-              src='/pccoe-logo-removebg-preview.png'
-              alt="Praxis Logo"
-              width={60}
-              height={60}
-              className="opacity-80"
-            />
+            
             </div>
           </motion.div>
         </div>

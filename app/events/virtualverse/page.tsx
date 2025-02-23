@@ -237,8 +237,8 @@ export default function VirtualVerseEvent() {
             >
 
 <h1>Event Leads</h1>
-                <h2>Eshal ()</h2>
-                <h2>Dheer ()</h2>
+                <h2>Eshal Shaikh (9325010694)</h2>
+                <h2>Shivamraj Matkar (8010610593)</h2>
                 <h1>.....................................</h1>
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
            <a href="https://drive.google.com/file/d/1GK60cLyo8EcRd5dSJe19uz3QMZOSMYza/view?usp=sharing" target="_blank" rel="noopener noreferrer">
