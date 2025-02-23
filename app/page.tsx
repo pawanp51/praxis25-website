@@ -10,6 +10,8 @@ import { useState } from "react"
 
 import flameImg from "../public/cta-bg-flames.webp"
 
+
+
 const cinzel = Cinzel({ subsets: ["latin"] })
 const medievalSharp = MedievalSharp({ weight: "400", subsets: ["latin"] })
 
@@ -85,11 +87,29 @@ const socialLinks = {
   GDGC: "https://www.instagram.com/gdgcpccoe?igsh=dzg5amt5M3VpMXBn"
 };
 
-export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+
+export default function Home() {
+  const [isIntroPlayed, setIsIntroPlayed] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
     <div className={`min-h-screen bg-[#0A0C10] text-[#D5B577] ${cinzel.className} overflow-x-hidden`}>
+       {!isIntroPlayed && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black">
+          <video
+            autoPlay
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            onEnded={() => setIsIntroPlayed(true)} // Render sections only after video ends
+          >
+            <source src="/intro.mp4" type="video/mp4" />
+          </video>
+        </div>
+      )}
+
+{isIntroPlayed && (
+        <>
       {/* Header */}
       <header className="fixed w-full z-50 bg-[#0A0C10]/96 backdrop-blur-sm border-b border-[#D5B577]/20">
         <div className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -184,10 +204,9 @@ export default function Home() {
           )}
         </div>
       </header>
-
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center">
-        <video
+     <section className="relative min-h-screen flex items-center justify-center">
+     <video
           autoPlay
           loop
           muted
@@ -195,8 +214,8 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/fire-vid.mp4" type="video/mp4" />
-        </video>
-
+        </video> 
+        
         <div id= "home"className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0A0C10]"></div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -395,6 +414,8 @@ export default function Home() {
           </motion.div>
         </div>
       </footer>
+      </>
+      )}
     </div>
   )
 }
