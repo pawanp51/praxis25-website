@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Cinzel, MedievalSharp } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Users, Trophy, Target } from "lucide-react"
+import { ArrowLeft, Trophy, Target } from "lucide-react"
 
 import flameImg from "../../../public/cta-bg-flames.webp"
 
@@ -17,10 +17,12 @@ const rounds = [
     title: "Round 1: The Mind Test",
     description: "Test with tricky questions, riddles or mystery puzzles.",
     details: [
-      "15 questions, 2 marks each",
+      "Mode: Offline PCCOE IT Building",
+      "Date: 7th March",
+      "30 questions, 2 marks each",
       "No negative marking",
       "Team size: 4 members",
-      "Topics: General Knowledge",
+      "Topics: Aptitude Reasoning",
       "Duration: 30 minutes",
     ],
     rules: [
@@ -30,12 +32,14 @@ const rounds = [
     ],
   },
   {
-    title: "Round 2: Escape Room",
+    title: "Round 2: The Escape Room",
     description: "Participants are trapped in a haunted location and must escape within a time limit.",
     details: [
+      "Venue: Offline IT Building",
       "Clues and puzzles will be given.",
       "Solve them to get the key for escaping the room",
-      "Venue: Mechanical Department Seminar Hall",
+      "Time limit - 5 min/team",
+      
     ],
     rules: [
       "No mobile phones or laptops allowed",
@@ -46,7 +50,7 @@ const rounds = [
   },
   {
     title: "Round 3: Confession Room",
-    description: "Participants are blindfolded and must solve the riddle by listening properly at once.",
+    description: "Participants are blindfolded and must solve the riddle.",
     details: [
       "Top 6 teams qualify",
       "Venue: IT Department classroom",
@@ -90,8 +94,8 @@ export default function ShipwreckEvent() {
                 className="opacity-80"
               />
               <div>
-                <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
-                  Survive the Shadows
+                <h1 className={`text-4xl md:text-8xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
+                  The Red Keep Lockdown : Survive The Shadows
                 </h1>
                 <p className="text-xl text-[#D5B577]">House Greyjoy Presents</p>
               </div>
@@ -161,6 +165,25 @@ export default function ShipwreckEvent() {
                 </div>
               </motion.div>
             ))}
+             
+
+             <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
+
+<h1>Event Leads</h1>
+                <h2>Riya Kulkarni (8767545503)</h2>
+                <h2>Anushka k (8999649728)</h2>
+                <h1>.....................................</h1>
+              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
+           <a href="//" target="_blank" rel="noopener noreferrer">
+                 Rulebook
+           </a>
+              </Button>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

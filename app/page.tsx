@@ -24,8 +24,8 @@ const events = [
     rounds: ["Quiz", "Speak Up to Stay Up", "Real Life Wumpus World"],
   },
   {
-    name: "Crick-Blitz",
-    description: "The Ultimate Cricket Strategy Battle",
+    name: "Shark Tank",
+    description: "Battle For The Crown",
     icon: "/stag-got-removebg-preview.png",
     house: "House Baratheon",
     link: "/events/crick-blitz",
@@ -34,7 +34,7 @@ const events = [
   },
   {
     name: "BGMI Showdown",
-    description: "Battle for the Iron Throne",
+    description: "War of the 7 Thrones",
     icon: "/arrow-got-removebg-preview.png",
     house: "House Martell",
     link: "/events/bgmi-showdown",
@@ -43,7 +43,7 @@ const events = [
   },
   {
     name: "Reverse Hackathon",
-    description: "Web Development in the Seven Kingdoms",
+    description: "The Cyber Coup take over the Iron Bank",
     icon: "/wolf-got-removebg-preview.png",
     house: "House Stark",
     link: "/events/reverse-hackathon",
@@ -51,17 +51,8 @@ const events = [
     rounds: ["Round 1", "Round 2", "Final Round"],
   },
   {
-    name: "Data Diggers",
-    description: "Mining Knowledge from the Citadel",
-    icon: "/eagle-got-removebg-preview.png",
-    house: "House Arryn",
-    link: "/events/data-diggers",
-    prize: "₹15,000",
-    rounds: ["Preliminary Round", "Data Wrangling", "Final Presentation"],
-  },
-  {
     name: "AI Canvas Contest",
-    description: "The Digital Art of the Realm",
+    description: "The Digital Underworld : Crime Lords and Kings",
     icon: "/dragon-got-removebg-preview.png",
     house: "House Targaryen",
     link: "/events/ai-canvas",
@@ -70,7 +61,7 @@ const events = [
   },
   {
     name: "Problemathon",
-    description: "The Grand Maester's Challenge",
+    description: "The Grand Conspiracy decode the Hidden Prophecy",
     icon: "/lion-got-removebg-preview.png",
     house: "House Lannister",
     link: "/events/problemathon",
@@ -78,8 +69,8 @@ const events = [
     rounds: ["Round 1", "Round 2", "Final Round"],
   },
   {
-    name: "VirtualVerse",
-    description: "The AR/VR Realm Beyond the Wall",
+    name: "Virtual Space Verse",
+    description: "Medieval Vice City: AR/VR Mafia",
     icon: "/fish-got-removebg-preview.png",
     house: "House Tully",
     link: "/events/virtualverse",
@@ -87,6 +78,12 @@ const events = [
     rounds: ["Idea Pitch", "Development", "Final Showcase"],
   },
 ]
+
+const socialLinks = {
+  IEEE: "https://www.instagram.com/pccoeieee?igsh=Zmt0NW92M3J5d2tp",
+  MLSC: "https://www.instagram.com/mlscpccoe?igsh=MXhsa2tyMmhxbzZsaw==",
+  GDGC: "https://www.instagram.com/gdgcpccoe?igsh=dzg5amt5M3VpMXBn"
+};
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -102,17 +99,38 @@ export default function Home() {
             className="text-2xl font-bold flex items-center gap-3"
           >
             <Image
-              src='/pccoe-logo-removebg-preview.png'
-              alt="PCCOE Logo"
-              width={50}
-              height={50}
+              src='/ITSA.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
+              className="opacity-80"
+            />
+             <Image
+              src='/IEEE.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
               className="opacity-80"
             />
             <Image
-              src='/praxis-logo-removebg-preview.png'
+              src='/gdgc.png'
               alt="Praxis Logo"
-              width={100}
-              height={100}
+              width={80}
+              height={80}
+              className="opacity-80"
+            />
+            <Image
+              src='/mlsc.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
+              className="opacity-80"
+            />
+            <Image
+              src='/pccoe-logo-removebg-preview.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
               className="opacity-80"
             />
           </motion.h1>
@@ -122,16 +140,26 @@ export default function Home() {
           </button>
 
           <nav className="hidden md:block">
-            <ul className="flex space-x-6">
-              {["Home", "Events"].map((item) => (
-                <motion.li key={item} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} >
-                  <Link href={`#${item.toLowerCase()}`} className="hover:text-[#FFD700] transition-colors">
-                    {item}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </nav>
+  <ul className="flex space-x-6">
+    {["Home", "Events"].map((item) => (
+      <motion.li
+        key={item}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={() => {
+          const section = document.getElementById(item.toLowerCase());
+          if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+        className="cursor-pointer hover:text-[#FFD700] transition-colors"
+      >
+        {item}
+      </motion.li>
+    ))}
+  </ul>
+</nav>
+
 
           {isMenuOpen && (
             <motion.nav
@@ -169,24 +197,33 @@ export default function Home() {
           <source src="/fire-vid.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0A0C10]"></div>
+        <div id= "home"className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0A0C10]"></div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-10 text-center px-4 max-w-4xl mx-auto"
+          className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20"
         >
           <div className={medievalSharp.className}>
-            <p className="text-sm sm:text-lg mb-2 text-white">
-              PCET's <span className="text-[#D5B577]">PIMPRI</span> CHINCHWAD COLLEGE OF ENGINEERING, PUNE
+            <p className="text-sm sm:text-lg mb-2 mt-10 text-white">
+              PCET&apos;s <span className="text-[#D5B577]">PIMPRI CHINCHWAD COLLEGE OF ENGINEERING </span> , PUNE
             </p>
             <p className="text-sm sm:text-lg mb-6 text-white">
               Department of <span className="text-[#D5B577]">Information Technology</span> presents
             </p>
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-4 text-white">Praxis'25</h1>
-            <p className="text-xl sm:text-2xl mb-8 text-[#D5B577]">
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-4 text-white">Praxis&apos;25</h1>
+            <p className="text-xl sm:text-2xl  text-[#D5B577]">
               Where Technology Meets the Seven Kingdoms
             </p>
+            <div className="flex justify-center items-center">
+     <Image
+    src="/praxis-logo-removebg-preview.png"
+    alt="Praxis Logo"
+    width={300} // Increased size
+    height={300}
+ className="brightness-110 transition-all duration-300 hover:brightness-150 hover:drop-shadow-[0px_0px_25px_rgba(255,255,255,0.8)]"
+  />
+</div>
           </div>
         </motion.div>
       </section>
@@ -276,10 +313,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+  
       {/* Footer */}
       <footer className="border-t border-[#D5B577]/20 py-12">
         <div className="container mx-auto px-4">
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -292,11 +330,15 @@ export default function Home() {
             <p className="mb-8 text-[#D5B577]/80">
               When you play the game of tech, you win or you debug
             </p>
+
+             
             <div className="flex justify-center space-x-6">
-              {["Twitter", "Instagram", "LinkedIn"].map((social) => (
+              {Object.entries(socialLinks).map(([social, link]) => (
                 <motion.a
                   key={social}
-                  href="#"
+                  href= {link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="hover:text-[#FFD700] transition-colors"
@@ -308,6 +350,44 @@ export default function Home() {
             <p className="mt-8 text-sm text-[#D5B577]/60">
               &copy; {new Date().getFullYear()} Praxis Tech Fest. All rights reserved.
             </p>
+            <div className="flex justify-center items-center space-x-8">
+          
+             <Image
+              src='/ITSA.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
+              className="opacity-80"
+            />
+             <Image
+              src='/IEEE.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
+              className="opacity-80"
+            />
+            <Image
+              src='/gdgc.png'
+              alt="Praxis Logo"
+              width={80}
+              height={80}
+              className="opacity-80"
+            />
+            <Image
+              src='/mlsc.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
+              className="opacity-80"
+            />
+            <Image
+              src='/pccoe-logo-removebg-preview.png'
+              alt="Praxis Logo"
+              width={60}
+              height={60}
+              className="opacity-80"
+            />
+            </div>
           </motion.div>
         </div>
       </footer>

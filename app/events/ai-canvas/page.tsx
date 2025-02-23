@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Cinzel, MedievalSharp } from 'next/font/google'
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Users, Trophy, Target, Palette, Brush, BookOpen } from 'lucide-react'
+import { ArrowLeft, Trophy, Target, Palette, Brush } from 'lucide-react'
 
 import flameImg from "../../../public/cta-bg-flames.webp"
 
@@ -17,12 +17,19 @@ const rounds = [
     title: "Round 1: AI Poster Making",
     description: "Showcase your creativity by using AI tools to produce professional-quality visuals",
     details: [
+      "Mode: Online",
+      "Platform: Online AI Tools",
+      "Team : 3 members",
+      "Date: 6th March ",
+      "Time: 10 am - 6 pm",
+      "Submission Type: Online",
       "Combine minimum of three AI-generated elements",
       "RGB color mode, maximum file size: 25 MB",
       "A3 size (11.7 x 16.5 inches)",
       "Theme revealed at the start of the round"
     ],
     rules: [
+      "Basic Editing Software Allowed",
       "Submit original AI prompts list",
       "Include final poster (PNG/PDF)",
       "Provide brief design concept (100 words)",
@@ -31,10 +38,14 @@ const rounds = [
     ]
   },
   {
-    title: "Round 2: AI Pictionary",
+    title: "Round 2: Pictogram Prowess (AI Pictionary)",
     description: "Test quick thinking, creativity, and teamwork in an interactive AI-powered game",
     details: [
-      "Roles: Prompt Master and Guessers",
+      "Mode: Offline",
+      "Venue: PCCOE IT Building",
+      "Date: 7th March",
+      "Time: 2 hours ( 12 - 2 pm)",
+      "Roles: Prompt Master (creates AI image) and 2 Guessers (interprets the image)",
       "Two attempts for AI image generation per word",
       "30 seconds to write each prompt",
       "2 minutes for guessing each image"
@@ -44,13 +55,21 @@ const rounds = [
       "No hints or direct descriptions allowed",
       "Correct guess on first attempt: 10 points",
       "Correct guess on second attempt: 5 points",
-      "Speed bonus (under 1 minute): 2 points"
+      "Speed bonus (under 1 minute): 2 points",
+      "Max points per word: 15"
     ]
   },
   {
-    title: "Round 3: AI Comic Creation",
+    title: "Round 3: Comic Catalyst (AI Comic Generation)",
     description: "Blend artistic skills with AI technology to craft unique comic book content",
     details: [
+      "Mode: Offline",
+      "Venue: PCCOE IT Building",
+      "Platform: Online AI Tools",
+      "Date: 8th March",
+      "Time: 1 hour ( 12 - 1 pm)",
+      "Participants receive a story theme and elements ",
+      "Must generate a comic book using AI tools",
       "6-8 panels minimum with consistent character designs",
       "High-resolution panels (2000x2000 px)",
       "Dialogue and narration required",
@@ -101,7 +120,7 @@ export default function AICanvasEvent() {
               />
               <div>
                 <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
-                  AI Canvas Contest
+                 The Digital Underworld: AI Canvas Contest
                 </h1>
                 <p className="text-xl text-[#D5B577]">House Targaryan Presents</p>
               </div>
@@ -204,6 +223,24 @@ export default function AICanvasEvent() {
                 </li>
               </ul>
             
+            </motion.div>
+             
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
+
+<h1>Event Leads</h1>
+                <h2>Tushar (9579341477)</h2>
+                <h2>Anish Patade (9175917645)</h2>
+                <h1>.....................................</h1>
+              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
+           <a href="//" target="_blank" rel="noopener noreferrer">
+                 Rulebook
+           </a>
+              </Button>
             </motion.div>
 
             <motion.div

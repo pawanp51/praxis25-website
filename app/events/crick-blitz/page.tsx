@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Cinzel, MedievalSharp } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Users, Trophy, Target } from "lucide-react"
+import { ArrowLeft, Trophy, Target } from "lucide-react"
 
 import flameImg from "../../../public/cta-bg-flames.webp"
 
@@ -92,7 +92,7 @@ export default function CrickBlitzEvent() {
               />
               <div>
                 <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
-                  Crick-Blitz
+                  Battle For The Crown : Shark Tank
                 </h1>
                 <p className="text-xl text-[#D5B577]">House Baratheon Presents</p>
               </div>
@@ -165,6 +165,24 @@ export default function CrickBlitzEvent() {
                 </div>
               </motion.div>
             ))}
+
+<motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
+
+<h1>Event Leads</h1>
+                <h2>Omkar Sardesai (8767545503)</h2>
+                <h2>Arunima Pingali (7743861208)</h2>
+                <h1>.....................................</h1>
+              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
+           <a href="//" target="_blank" rel="noopener noreferrer">
+                 Rulebook
+           </a>
+              </Button>
+            </motion.div>
 
 <motion.div
               initial={{ opacity: 0, y: 20 }}

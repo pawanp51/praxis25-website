@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Cinzel, MedievalSharp } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Users, Trophy, Target, Database, Brain } from "lucide-react"
+import { ArrowLeft, Trophy, Target, Database, Brain } from "lucide-react"
 
 import flameImg from "../../../public/cta-bg-flames.webp"
 
@@ -194,6 +194,24 @@ export default function DataDiggersEvent() {
                   Basic knowledge of data science concepts
                 </li>
               </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
+
+<h1>Event Leads</h1>
+                <h2>Omkar Sardesai (8767545503)</h2>
+                <h2>Arunima Pingali (7743861208)</h2>
+                <h1>.....................................</h1>
+              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
+           <a href="//" target="_blank" rel="noopener noreferrer">
+                 Rulebook
+           </a>
+              </Button>
             </motion.div>
 
             <motion.div

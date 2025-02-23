@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Cinzel, MedievalSharp } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Users, Trophy, Target, Glasses, Lightbulb, PenTool } from "lucide-react"
+import { ArrowLeft, Trophy, Target, Glasses, Lightbulb, PenTool } from "lucide-react"
 
 import flameImg from "../../../public/cta-bg-flames.webp"
 
@@ -38,7 +38,6 @@ const competition = {
   title: "StoryCrafter Showdown",
   description: "Create a captivating AR/VR story using CoSpaces",
   details: [
-    "Form teams of 3-5 members",
     "Theme: 'Time Travel Adventure' or create a short, interactive AR/VR story",
     "Incorporate interactive elements (clickable objects, animations, dynamic scenes)",
     "Create an immersive story where user actions influence the narrative",
@@ -230,7 +229,24 @@ export default function VirtualVerseEvent() {
               </ul>
              
             </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
 
+<h1>Event Leads</h1>
+                <h2>Eshal ()</h2>
+                <h2>Dheer ()</h2>
+                <h1>.....................................</h1>
+              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
+           <a href="//" target="_blank" rel="noopener noreferrer">
+                 Rulebook
+           </a>
+              </Button>
+            </motion.div>
+            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

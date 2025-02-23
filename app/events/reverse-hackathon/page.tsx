@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Cinzel, MedievalSharp } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Users, Trophy, Target, Code, Bug } from "lucide-react"
+import { ArrowLeft, Trophy, Target, Code, Bug } from "lucide-react"
 
 import flameImg from "../../../public/cta-bg-flames.webp"
 
@@ -17,27 +17,40 @@ const rounds = [
     title: "Round 1: Build-on-the-Go",
     description: "Create a frontend-only website using provided assets and themes",
     details: [
-      "Teams receive a basic website skeleton",
+      "Team size : 3",
+      "Time : 1.5 hours (10.30 am - 12 pm)",
+      "Date: 7th March",
+      "Mode : Offline",
+      "Venue: PCCOE IT Building",
+      "Platform: Vercel/Netlify",
+      "Teams receive a basic website skeleton and a theme",
       "Specific theme announced at start",
       "New assets provided periodically",
       "10 minutes freestyle time at the end",
       "Deploy on Vercel or Netlify",
+      "Ensure your laptop environment is node.js and npm ready"
     ],
     rules: [
       "Incorporate all provided assets",
+      "No Premade Templates",
+      "No Plagarism",
       "Adhere to the announced theme",
       "Submit deployed website link for evaluation",
-      "Creative use of assets is encouraged",
-      "Design consistency and user experience are key",
+
     ],
   },
   {
     title: "Round 2: Fullstack Bug Fixing",
     description: "Identify and resolve issues in a functional website's codebase",
     details: [
+      "Mode : Offline",
+      "Venue: PCCOE IT Building",
+      "Duration: 2 hours",
+      "Time: 3 - 5 pm",
+      "Platform: Local System IDEs (VScode, Intellij etc)",
       "Teams receive full codebase of a pre-built website",
       "15-minute familiarization period",
-      "1-2 hours to fix as many issues as possible",
+      "1.5 hours to fix as many issues as possible",
       "Log and submit each fixed issue with description",
     ],
     rules: [
@@ -81,7 +94,7 @@ export default function ReverseHackathonEvent() {
               />
               <div>
                 <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
-                  Reverse Hackathon
+                  The Cyber Coup: Reverse Hackathon
                 </h1>
                 <p className="text-xl text-[#D5B577]">House Stark Presents</p>
               </div>
@@ -182,6 +195,24 @@ export default function ReverseHackathonEvent() {
                 </li>
               </ul>
               
+            </motion.div>
+              
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
+
+<h1>Event Leads</h1>
+                <h2>Sarthak Joshi ()</h2>
+                <h2>Pawan Patil (8381021200)</h2>
+                <h1>.....................................</h1>
+              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
+           <a href="https://docs.google.com/document/d/1JJ63aSxurANJhCOv1OvMnV29lHGdv8YkuVIVQG2atkU/edit?tab=t.0#heading=h.28qrp76tprjd" target="_blank" rel="noopener noreferrer">
+                 Rulebook
+           </a>
+              </Button>
             </motion.div>
 
             <motion.div

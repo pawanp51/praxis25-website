@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Cinzel, MedievalSharp } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Users, Trophy, Target, Code, Zap } from "lucide-react"
+import { ArrowLeft, Trophy, Target, Code, Zap } from "lucide-react"
 
 import flameImg from "../../../public/cta-bg-flames.webp"
 
@@ -14,27 +14,32 @@ const medievalSharp = MedievalSharp({ weight: "400", subsets: ["latin"] })
 
 const rounds = [
   {
-    title: "Round 1: Problemathon (Online)",
+    title: "Round 1: Spark Start (Online)",
     description: "Solve a mix of coding problems, debugging tasks, and MCQs testing programming concepts",
     details: [
-      "Platform: Hackerrank",
-      "2 algorithmic coding challenges",
-      "2 debugging tasks",
-      "10 MCQs covering programming concepts and algorithms",
+      "Platform: Google Forms",
+      "Date: 6th March 2025",
+      "Time: 9 - 9:30 pm",
+      " Mcq's on:",
+      " Algorithmic coding challenges",
+      " Debugging tasks",
+      " MCQs covering programming concepts and algorithms",
       "Time Limit: 30 minutes",
     ],
     rules: [
       "Teams of 2 members",
       "No external assistance allowed",
-      "Judging based on Coding Problems (50%), Debugging Tasks (30%), MCQs (20%)",
       "Tie-breaker: Shortest completion time",
     ],
   },
   {
-    title: "Round 2: Monitor-Keyboard Split (On-Campus)",
+    title: "Round 2:  Duo Dash (Monitor-Keyboard Split)",
     description: "Solve programming problems collaboratively using a pair-programming format",
     details: [
-      "Platform: CodeChef",
+      "Mode : Offline PCCOE IT Building",
+      "Platform: Codeforces",
+      "Date: 8th March",
+      "Time: 10 - 11:30 am",
       "One team member views monitor and guides, other implements",
       "Roles fixed for entire round (2 hours)",
       "4-5 problems ranging from easy to medium difficulty",
@@ -47,12 +52,15 @@ const rounds = [
     ],
   },
   {
-    title: "Round 3: CP Battle Royale (On-Campus)",
+    title: "Round 3: Code Crown (CP Battle)",
     description: "A classic competitive programming contest testing advanced problem-solving abilities",
     details: [
-      "Platform: CodeChef",
+      "Mode: Offline PCCOE IT Building",
+      "Platform: Codeforces",
+      "Date: 8th March",
+      "Time: 1:30 - 3:30 pm",
       "6-7 algorithmic challenges of varying difficulty",
-      "Time Limit: 2 hours 30 minutes",
+      "Time Limit: 2 hours",
       "Problems range from easy to hard",
     ],
     rules: [
@@ -95,14 +103,14 @@ export default function ProblemathonEvent() {
               />
               <div>
                 <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
-                  Problemathon
+                  The Grand Conspiracy Decode The Hidden Prophecy - Problemathon
                 </h1>
                 <p className="text-xl text-[#D5B577]">House Lannister Presents</p>
               </div>
             </div>
 
             <p className="text-lg md:text-xl mb-8">
-              Conquer the seas of code in this epic programming challenge. Debug, optimize, and triumph!
+            Conquer the seas of code in this epic programming challenge. Debug, optimize, and triumph!
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -196,6 +204,23 @@ export default function ProblemathonEvent() {
                 </li>
               </ul>
               
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="pt-8 border-t border-[#D5B577]/20"
+            >
+
+<h1>Event Leads</h1>
+                <h2>Adinath Yadav (7757937107)</h2>
+                <h2>Siddhesh  (9136699226)</h2>
+                <h1>.....................................</h1>
+              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
+           <a href="https://docs.google.com/document/d/1RCrqZ5cvLL7R3Ae9moMvEet8SAu86FlAYh3hvh9VnJA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                 Rulebook
+           </a>
+              </Button>
             </motion.div>
 
             <motion.div
