@@ -87,7 +87,7 @@ export default function VirtualVerseEvent() {
               />
               <div>
                 <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
-                  VirtualVerse
+                  Medieval Vice City : AR/VR Mafia
                 </h1>
                 <p className="text-xl text-[#D5B577]">House Tully Presents</p>
               </div>
@@ -241,25 +241,11 @@ export default function VirtualVerseEvent() {
                 <h2>Dheer ()</h2>
                 <h1>.....................................</h1>
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://drive.google.com/file/d/1GK60cLyo8EcRd5dSJe19uz3QMZOSMYza/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                  Rulebook
            </a>
               </Button>
             </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="pt-8 border-t border-[#D5B577]/20"
-            >
-              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
-                 Register Now
-           </a>
-              </Button>
-              <h1>PCCOE Participants</h1>
-            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -268,12 +254,12 @@ export default function VirtualVerseEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://tinyurl.com/gdgcMVC" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>
 
-              <h1>Non-PCCOE Participants</h1>
+              <h1>Both PCCOE And Non-PCCOE Participants</h1>
             </motion.div>
           </div>
         </div>

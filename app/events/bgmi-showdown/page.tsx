@@ -181,7 +181,7 @@ export default function BGMIShowdownEvent() {
                 <h2>Krishna Turkar (9322350991)</h2>
                 <h1>.....................................</h1>
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://drive.google.com/file/d/1GLFSTyZ9UdGfHGVtQW00vG4jhAIeH6yC/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                  Rulebook
            </a>
               </Button>
@@ -194,7 +194,7 @@ export default function BGMIShowdownEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/YHALX94s1zigAcpJ6" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>
@@ -208,7 +208,7 @@ export default function BGMIShowdownEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/9vBbAUXMKtwY1tfE6" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>

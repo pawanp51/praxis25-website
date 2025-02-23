@@ -6,7 +6,7 @@ import { Cinzel, MedievalSharp } from "next/font/google"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react";
 
 import flameImg from "../public/cta-bg-flames.webp"
 
@@ -23,16 +23,16 @@ const events = [
     house: "House Greyjoy",
     link: "/events/survive-the-shadows",
     prize: "₹15,000",
-    rounds: ["Quiz", "Speak Up to Stay Up", "Real Life Wumpus World"],
+    rounds: ["Mind Test", "Escape Room", "Confession Room"],
   },
   {
-    name: "Shark Tank",
+    name: "Throne Pitch",
     description: "Battle For The Crown",
     icon: "/stag-got-removebg-preview.png",
     house: "House Baratheon",
     link: "/events/crick-blitz",
     prize: "₹15,000",
-    rounds: ["Group Stage", "Knockout Stage", "Final"],
+    rounds: ["Crown First Trial", "The Coronation"],
   },
   {
     name: "BGMI Showdown",
@@ -50,7 +50,7 @@ const events = [
     house: "House Stark",
     link: "/events/reverse-hackathon",
     prize: "₹15,000",
-    rounds: ["Round 1", "Round 2", "Final Round"],
+    rounds: ["Build-on-the-go", "Fullstack Bug Fixing"],
   },
   {
     name: "AI Canvas Contest",
@@ -59,7 +59,7 @@ const events = [
     house: "House Targaryen",
     link: "/events/ai-canvas",
     prize: "₹15,000",
-    rounds: ["Concept Submission", "AI Generation", "Final Judging"],
+    rounds: ["Poster Making", "Pictogram Prowess", "Comic Catalyst"],
   },
   {
     name: "Problemathon",
@@ -68,7 +68,7 @@ const events = [
     house: "House Lannister",
     link: "/events/problemathon",
     prize: "₹15,000",
-    rounds: ["Round 1", "Round 2", "Final Round"],
+    rounds: ["Spark Start", "Duo Dash", "Code Crown"],
   },
   {
     name: "Virtual Space Verse",
@@ -77,7 +77,7 @@ const events = [
     house: "House Tully",
     link: "/events/virtualverse",
     prize: "₹10,000",
-    rounds: ["Idea Pitch", "Development", "Final Showcase"],
+    rounds: ["Snap Studio", "AR.JS Adventure", "Cospaces Creator"],
   },
 ]
 
@@ -91,10 +91,21 @@ const socialLinks = {
 
 export default function Home() {
   const [isIntroPlayed, setIsIntroPlayed] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isFirstTime, setIsFirstTime] = useState(false);
+  useEffect(() => {
+    const hasSeenIntro = localStorage.getItem("hasSeenIntro");
+    if (!hasSeenIntro) {
+      setIsFirstTime(true);
+      localStorage.setItem("hasSeenIntro", "true"); // Mark as seen
+    } else {
+      setIsIntroPlayed(true);
+    }
+  }, []);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className={`min-h-screen bg-[#0A0C10] text-[#D5B577] ${cinzel.className} overflow-x-hidden`}>
-       {!isIntroPlayed && (
+       {isFirstTime && !isIntroPlayed &&(
         <div className="fixed inset-0 flex items-center justify-center bg-black">
           <video
             autoPlay
@@ -108,7 +119,7 @@ export default function Home() {
         </div>
       )}
 
-{isIntroPlayed && (
+{(isIntroPlayed || !isFirstTime) &&  (
         <>
       {/* Header */}
       <header className="fixed w-full z-50 bg-[#0A0C10]/96 backdrop-blur-sm border-b border-[#D5B577]/20">

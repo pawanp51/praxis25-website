@@ -14,52 +14,52 @@ const medievalSharp = MedievalSharp({ weight: "400", subsets: ["latin"] })
 
 const rounds = [
   {
-    title: "Round 1: Quiz",
-    description: "Test your knowledge of the Indian Premier League (IPL)",
+    title: "Round 1: The Crown’s First Trial (Preliminary Round)",
+    description: "Submit a well-structured startup pitch presentation showcasing your innovative idea.",
     details: [
-      "40 multiple-choice questions",
-      "Topics: IPL history, player stats, memorable matches, records",
-      "Duration: 30-40 minutes",
-      "Conducted in two classrooms",
+      "Mode: Online",
+      "Submission: PowerPoint Presentation (PPT)",
+      "Deadline: 7th March 2025, 2 P.M",
+      "Submission link will be shared via WhatsApp group",
     ],
     rules: [
-      "Teams will be distributed evenly across classrooms",
-      "Top 40 teams qualify for Round 2 (20 from each classroom)",
-      "Tie-breaker questions may be used if needed",
+      "Teams must submit a PPT covering the problem statement, solution, market opportunity, execution plan, and financial model.",
+      "Late submissions will not be entertained.",
+      "Top shortlisted teams will advance to the next round.",
     ],
   },
   {
-    title: "Round 2: Buzzer Round",
-    description: "A fast-paced, interactive physical quiz to test speed and accuracy",
+    title: "Round 2: The Coronation (Mentorship & Final Pitches)",
+    description: "Finalists will receive expert mentorship to refine their startup ideas before presenting them to the investors.",
     details: [
-      "25 questions on various IPL topics",
-      "Buzzer or flag system for answering",
-      "1 point for correct answer, -1 for incorrect",
-      "Top 20 teams qualify for final round",
+      "Mode: Offline",
+      "Venue: PCCOE IT Department",
+      "Mentorship Session: Industry experts will guide teams on business strategy and financial modeling.",
+      "Final Pitch Session: Teams will present their refined startup ideas to the investor panel.",
     ],
     rules: [
-      "First team to buzz/raise flag gets to answer",
-      "Quick responses encouraged, but accuracy is crucial",
-      "Equal selection from both classrooms for final round",
+      "Each team gets 5 minutes for their pitch, followed by a 3-minute Q&A session.",
+      "Teams must incorporate feedback from mentors into their final presentations.",
+      "Judges will evaluate pitches based on innovation, feasibility, financial viability, and presentation skills.",
     ],
   },
   {
-    title: "Round 3: Auction Round",
-    description: "Build your dream IPL franchise through strategic bidding",
+    title: "Round 3: The Investment Negotiation (Grading Simulation)",
+    description: "A real-world simulation where teams negotiate with investors to secure mock investments.",
     details: [
-      "10 teams per block, 4 members per team",
-      "Virtual budget: ₹120 crore",
-      "130 players available for auction",
-      "Squad size: 20-24 players (max 8 overseas)",
+      "Mode: Offline",
+      "Venue: PCCOE IT Department",
+      "Teams will engage in a negotiation round where they defend their startup’s valuation and funding needs.",
+      "Investors will allocate mock grades based on startup potential.",
     ],
     rules: [
-      "Live auction format",
-      "Digital gadgets allowed for strategy",
-      "Trade Windows and Right-to-Match cards available",
-      "Winner based on total player ratings and franchise brand value",
+      "Teams must justify their valuation and funding requests convincingly.",
+      "Effective negotiation and persuasion will impact the final grading.",
+      "Judges decisions will be final and binding.",
     ],
   },
-]
+  
+];
 
 export default function CrickBlitzEvent() {
   return (
@@ -92,14 +92,15 @@ export default function CrickBlitzEvent() {
               />
               <div>
                 <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white ${medievalSharp.className}`}>
-                  Battle For The Crown : Shark Tank
+                  Battle For The Crown : Throne Pitch
                 </h1>
                 <p className="text-xl text-[#D5B577]">House Baratheon Presents</p>
               </div>
             </div>
 
             <p className="text-lg md:text-xl mb-8">
-              Step into the arena of cricket strategy and knowledge. Prove your worth in the ultimate IPL challenge!
+            Pitching competition where students 
+            present innovative business ideas to a panel of investors.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -178,7 +179,7 @@ export default function CrickBlitzEvent() {
                 <h2>Arunima Pingali (7743861208)</h2>
                 <h1>.....................................</h1>
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://drive.google.com/file/d/1JqoKjlFEVIVYB4liHSR1b0QKwRRHvABk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                  Rulebook
            </a>
               </Button>
@@ -191,7 +192,7 @@ export default function CrickBlitzEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/zKgtfGMAWSormqgu6" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>
@@ -205,7 +206,7 @@ export default function CrickBlitzEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/KWRPGahBdBcrVrvQ6" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>

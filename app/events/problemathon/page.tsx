@@ -217,7 +217,7 @@ export default function ProblemathonEvent() {
                 <h2>Siddhesh  (9136699226)</h2>
                 <h1>.....................................</h1>
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="https://docs.google.com/document/d/1RCrqZ5cvLL7R3Ae9moMvEet8SAu86FlAYh3hvh9VnJA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+           <a href="https://drive.google.com/file/d/1_k8j1z6td9u8QH5rgk72S8MgVLqNqSU5/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                  Rulebook
            </a>
               </Button>
@@ -230,26 +230,12 @@ export default function ProblemathonEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
-                 Register Now
-           </a>
-              </Button>
-              <h1>PCCOE Participants</h1>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="pt-8 border-t border-[#D5B577]/20"
-            >
-              <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://docs.google.com/forms/d/e/1FAIpQLScwph-lB-vleckor-eV00AXDzcbTyrsrSa57_uhu0FF9eXE-A/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>
 
-              <h1>Non-PCCOE Participants</h1>
+              <h1>Both PCCOE And Non-PCCOE Participants</h1>
             </motion.div>
           </div>
         </div>

@@ -179,7 +179,7 @@ export default function ShipwreckEvent() {
                 <h2>Anushka k (8999649728)</h2>
                 <h1>.....................................</h1>
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://drive.google.com/file/d/1o1P8Qv8nfMQiDYxLkfxaTxX2WDmNfKTU/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                  Rulebook
            </a>
               </Button>
@@ -192,7 +192,7 @@ export default function ShipwreckEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/3MvYRR5Bw2R2mq2C6" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>
@@ -206,7 +206,7 @@ export default function ShipwreckEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="//" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/62NZczqZd5zHBzrC9" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>
