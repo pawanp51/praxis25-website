@@ -222,7 +222,7 @@ export default function ReverseHackathonEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="https://docs.google.com/forms/d/e/1FAIpQLSduQ8QtSKUjaVxQfml6WZPfBVStM2f0m9IVB3UnJXmHFxzmVQ/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/nMryvftDCmQo15tW8" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>

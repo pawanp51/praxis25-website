@@ -230,7 +230,7 @@ export default function ProblemathonEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="https://docs.google.com/forms/d/e/1FAIpQLScwph-lB-vleckor-eV00AXDzcbTyrsrSa57_uhu0FF9eXE-A/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/892jcRFvZ8VPatP86" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>

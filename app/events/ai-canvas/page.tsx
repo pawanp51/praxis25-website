@@ -250,7 +250,7 @@ export default function AICanvasEvent() {
               className="pt-8 border-t border-[#D5B577]/20"
             >
               <Button className="w-full md:w-auto bg-[#D5B577] text-[#0A0C10] hover:bg-[#FFD700]">
-           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeX1ARCZGqG_8Wkx5V6N8Tjg42YwlcBi88K78NKgJdbdkdShA/viewform?usp=sharing" target="_blank" rel="noopener noreferrer">
+           <a href="https://forms.gle/vhE2NsD7eLUK24Ep9" target="_blank" rel="noopener noreferrer">
                  Register Now
            </a>
               </Button>
