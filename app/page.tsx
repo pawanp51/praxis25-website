@@ -94,12 +94,24 @@ export default function Home() {
   const [isFirstTime, setIsFirstTime] = useState(false);
   useEffect(() => {
     const hasSeenIntro = localStorage.getItem("hasSeenIntro");
+
     if (!hasSeenIntro) {
-      setIsFirstTime(true);
-      localStorage.setItem("hasSeenIntro", "true"); // Mark as seen
+      setIsFirstTime(true); // First-time visitor, show intro video
+      localStorage.setItem("hasSeenIntro", "true");
     } else {
-      setIsIntroPlayed(true);
+      setIsIntroPlayed(true); // Skip intro, load main page directly
     }
+
+    // Detect when user is leaving the website (back, refresh, close)
+    const handleUnload = () => {
+      localStorage.removeItem("hasSeenIntro"); // Reset intro for next visit
+    };
+
+    window.addEventListener("beforeunload", handleUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleUnload);
+    };
   }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
