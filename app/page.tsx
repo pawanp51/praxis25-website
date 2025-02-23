@@ -241,6 +241,10 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0A0C10]"></div>
         <div className="relative container mx-auto px-4">
+          <div className="flex justify-center">
+            <img src="main-poster.png" className="w-3/6 mb-12"/>
+          </div>
+          
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

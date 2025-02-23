@@ -198,7 +198,7 @@ export default function BGMIShowdownEvent() {
                  Register Now
            </a>
               </Button>
-              <h1>PCCOE Participants</h1>
+              <h1>PCCOE Participants ( Also applicable for those with at least one team member from PCCOE)</h1>
             </motion.div>
 
             <motion.div
